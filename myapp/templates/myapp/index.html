@@ -1,0 +1,21 @@
+{% load custom_tags %}
+
+{% if menus %}
+    <ul>
+        {% for menu in menus%}
+            <li><a href='{{ menu }}'>{{ menu }}</li>
+        {% endfor %}
+    </ul>    
+{% elif menu_name %}
+    <h3><a href={% url 'main_menu' %}>Главная страница</h3>
+    {% if menu_name == menu_item%}
+     <h1>{{menu_name}}</h1>
+    {% else %}
+     <h1>{{menu_name}}</h1>
+      <h1>{{menu_item}}</h1>
+
+    {% endif %}
+
+
+    {% draw_menu_templates menu_name menu_item%}
+{% endif %}
