@@ -10,7 +10,7 @@ class Menu(models.Model):
 
     class Meta:
         ordering = ['id']
-        verbose_name = 'Меню'
+        verbose_name = 'Менюю'
         verbose_name_plural = 'Меню'
 
     def __str__(self):
